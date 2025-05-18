@@ -1,0 +1,13 @@
+app = "my-python-app"  # Thay bằng tên app bạn muốn
+
+[build]
+  builder = "paketobuildpacks/builder:base"
+
+[env]
+  PORT = "8080"  # Phải khớp với port trong app.py
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
